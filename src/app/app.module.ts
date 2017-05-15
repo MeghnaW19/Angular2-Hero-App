@@ -16,49 +16,47 @@ import { HttpModule }    from '@angular/http';
 import { HeroSearchComponent }  from './hero-search.component';
 
 @NgModule({
- imports: [
-   BrowserModule,
-   FormsModule,
-     HttpModule,
-  InMemoryWebApiModule.forRoot(InMemoryDataService),
-   AppRoutingModule,
-   RouterModule.forRoot([
+  imports: [
+           BrowserModule,
+           FormsModule,
+           HttpModule,
+           InMemoryWebApiModule.forRoot(InMemoryDataService),
+           AppRoutingModule,
+
+  RouterModule.forRoot([
      {
-       path: 'heroes',
-       component: HeroesComponent
+           path: 'heroes', //router matches this route's path to the URL in the browser address bar (heroes).
+           component: HeroesComponent
      },
      {
-       path: 'dashboard',
-       component: DashboardComponent
+           path: 'dashboard',
+           component: DashboardComponent
      },
      {
-       path: '',
-       redirectTo: '/dashboard',
-       pathMatch: 'full'
+           path: '',
+           redirectTo: '/dashboard',
+           pathMatch: 'full'
       },
       {
-        path: 'detail/:id',
-        component: HeroDetailComponent
+           path: 'detail/:id',
+           component: HeroDetailComponent
       },
-      // {
-      //    path: 'detail/:id',
-      //    component: HeroDetailComponent
-      //  }
-
-
    ]),
  ],
- declarations: [
-   AppComponent,
-   DashboardComponent,
-   HeroDetailComponent,
-   HeroesComponent,
-   HeroSearchComponent
+  
+  declarations: [
+           AppComponent,
+           DashboardComponent,
+           HeroDetailComponent,
+           HeroesComponent,
+           HeroSearchComponent
  ],
- providers: [
-   HeroService
+  
+  providers: [
+           HeroService
  ],
- bootstrap: [ AppComponent ]
+ 
+  bootstrap: [ AppComponent ]
 })
 
 export class AppModule {
