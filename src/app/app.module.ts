@@ -1,6 +1,6 @@
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule }    from '@angular/forms';
+import { FormsModule }    from '@angular/forms'; //ngModel lives here
 import { RouterModule }   from '@angular/router';
 
 // Imports for loading & configuring the in-memory web api
@@ -19,7 +19,7 @@ import { HeroSearchComponent }  from './hero-search.component';
 @NgModule({
   imports: [
            BrowserModule,
-           FormsModule,
+           FormsModule, // import the FormsModule before binding with [(ngModel)]
            HttpModule,
            InMemoryWebApiModule.forRoot(InMemoryDataService),
            AppRoutingModule,
