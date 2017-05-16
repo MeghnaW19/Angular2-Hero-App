@@ -4,6 +4,7 @@ import {Router} from 'angular2/router';
 import {Authentication} from './authentication';
 
 @Component({
+  
   selector: 'login',
   directives: [ FORM_DIRECTIVES, NgIf ],
   template: `

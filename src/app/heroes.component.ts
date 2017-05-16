@@ -17,6 +17,7 @@ export class HeroesComponent implements OnInit {
     this.heroService
         .getHeroes()
         .then(heroes => this.heroes = heroes);
+        
   }
   add(name: string): void {
     name = name.trim();
