@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular2/core';
 import {Router, CanActivate} from 'angular2/router';
 import {Authentication} from './authentication';
 import {isLoggedin}  from './is-loggedin';
